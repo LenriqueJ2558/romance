@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heart-text p {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alínealo en la parte inferior */
+    padding-bottom: 20px; /* Espacio para la carta */
+}
+
+.card {
+    width: 300px;
+    max-width: 80%; /* Tamaño responsivo */
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: rotateX(0);
+    transition: transform 0.6s;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden; /* Oculto inicialmente */
+}
+
+.card.open {
+    opacity: 1;
+    visibility: visible; /* Mostrar la carta cuando esté abierta */
+}
+
+.card-content {
+    padding: 20px;
+    height: 100%;
+}
+.card-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fefefe; /* Color de fondo claro para el mensaje */
+    max-width: 90%; /* Asegúrate de que el texto no se estire demasiado */
+    margin: 0 auto; /* Centrar la carta */
+}
+body {
+    background-color: #f0f8ff; /* Un color suave como el azul claro o el beige claro */
+}

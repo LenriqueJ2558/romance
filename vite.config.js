@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: "https://martl7.github.io/February-Declaration/",
+  build: {
+    outDir: 'dist', // Asegúrate de que este sea el nombre del directorio de salida
+  },
 })
